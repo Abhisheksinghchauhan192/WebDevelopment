@@ -1,0 +1,144 @@
+/* 
+
+    Universal Selector 
+*{
+
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: aqua;
+} */
+
+
+/* element selector select same type of all the elements.. */
+
+h1,h3{
+    color: #b92b27;
+}
+
+h3:hover{
+
+    text-decoration: none;
+    font-size: 20px;
+}
+
+#login{
+
+    background-color: mediumaquamarine;
+    font-weight:bold;
+    text-align: center;
+    font-size:18px;
+    border-radius: 5px;
+    border-color: mediumaquamarine;
+    transition: transform 0.2s;
+
+}
+#login:hover{
+    background-color: blue;
+    color:white;
+    transform: scale(1.1);
+}
+
+#signup{
+
+    background-color: #b92b27;
+    color:white;
+    transition: transform 0.5s,color;
+}
+#signup:hover{
+    color:darkblue;
+    transform:scale(1.2);
+    transform: rotate(20deg);
+}
+
+.follow{
+
+    color:blueviolet;
+    text-decoration: none;
+    
+}
+
+.follow:active{
+    color: green;
+    font-size: 17px;
+}
+.upvote{
+    color:aliceblue;
+    background-color: green;
+    transition: transform 1s;
+    
+}
+
+/* sibling combinators */
+
+/* parapraph k immidiate bad jitne bhi h3 tag a unko target karo  */
+
+p + h3{
+    text-decoration: underline;
+}
+
+span > button{
+    background-color:aqua;
+}
+
+/* descendent selector */
+div > input{
+    background-color: rgb(239, 229, 229);
+}
+
+/* attribute selector */
+
+input[type="password"]{
+    color:green;
+    background-color: magenta;
+}
+
+input[type="radio"]:checked + label{
+
+    color:red;
+    font-weight: bold;
+}
+
+/* every 2th div will get selectedd */ 
+
+ /* div:nth-of-type(2n){
+    background-color: skyblue;
+}  */
+
+
+.upvote:hover{
+
+    background-color: yellow;
+    color: black;
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
+.card{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card div {
+    margin-bottom: 40px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 100px;
+    width: 300px;
+    transition: transform 0.5s;
+    background-color: lightcoral;
+    
+}
+
+.card div:hover {
+    transform: scale(1.2);
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+}
+
+/* pseudo element  */
+h1::first-letter{
+    color:green;
+    font-size: larger;
+}
+
+h3::selection{
+    background-color: #b8fba4;
+}

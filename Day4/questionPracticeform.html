@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Question Solution</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">Question Solution</h1>
+    <form action="/server">
+      <fieldset>
+        <legend>Solution :</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="UserName" required />
+        <div class="radiobuttons">
+          <label>Sex:</label>
+          <input type="radio" id="male" name="Gender" value="male" />
+          <label for="male">Male</label>
+          <input type="radio" id="fmale" name="Gender" value="female" />
+          <label for="fmale">Female</label>
+        </div>
+        <div class="countrydropdown">
+          <label for="country">Country:</label>
+          <select name="country" id="country">
+            <option value="">Choose an Option</option>
+            <option value="india">India</option>
+            <option value="uk">United Kingdom</option>
+            <option value="usa">USA</option>
+          </select>
+        </div>
+        <div class="subscriornot">
+          <input type="checkbox" name="Subscribe" id="sub">
+          <label for="sub">Subscribe?</label>
+        </div>
+        <label for="msg">Message:</label>
+        <div class="messagebox">
+            <textarea name="message" id="msg" placeholder="Type your message here!" rows="2" cols="20" maxlength="40"></textarea>
+        </div>
+        <div class="submitbuton">
+          <button>Submit</button>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>

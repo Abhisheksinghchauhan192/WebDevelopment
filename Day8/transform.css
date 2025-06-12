@@ -1,0 +1,42 @@
+.tran{
+    height: 800px;
+    width: 800px;
+    margin: 0 auto;
+    background-color:rgb(0,222,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prop{
+    margin:20px;
+    height: 100px;
+    width: 200px;
+    border:1px red solid;
+    background-color: orange;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+}
+
+.prop:nth-of-type(2n){
+    background-color: lightseagreen;
+}
+
+#two{
+    transform:rotate(-45deg)
+}
+#one{
+    transform: scale(0.5);
+}
+#three{
+    transform: translateX(-90px);
+}
+#four{
+    transform: skew(-30deg) translateX(60px);
+}
+
+div > ul{
+    list-style-type:decimal;
+}

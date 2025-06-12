@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity4</title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #btn{
+            height: 30px;
+            width: 150px;
+            background-color: yellow;
+            color:blue;
+            border-radius: 20px;
+            cursor:pointer;
+            font-size: 1rem;
+        }
+
+        #colorbox{
+            
+            width:400px;
+            height: 400px;
+            background-color: skyblue;
+            margin: 2rem;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+
+    </div>
+    <script>
+
+        let main = document.querySelector(".main");
+        let color = document.createElement("h1");
+        color.innerHTML = "<b> Random Color Generator </b>";
+        main.append(color);
+        let genbtn = document.createElement("button");
+        genbtn.innerHTML = "<b> Generate Color</b>";
+        genbtn.setAttribute("id","btn")
+        main.append(genbtn);
+
+        let box = document.createElement("div");
+        box.setAttribute("id","colorbox");
+        main.append(box);
+
+        // fucntion to generate a random rgb color.. 
+
+        function getcolor (){
+            const r = Math.floor(Math.random()*256);
+            const g = Math.floor(Math.random()*256);
+            const b = Math.floor(Math.random()*256);
+
+            return `rgb(${r},${g},${b})`;
+        }
+
+        function setcolor(){
+            let newcolor = getcolor();
+            box.style.backgroundColor = newcolor;
+            color.innerHTML = ` <b> ${newcolor} </b>`;
+            color.style.color = `${newcolor}`;
+        }
+
+        // setting the functionality in the button 
+        genbtn.addEventListener("click",setcolor);
+        genbtn.addEventListener("click",function (){
+            this.style.backgroundColor = "lightgreen"
+        });
+
+
+
+    </script>
+</body>
+</html>

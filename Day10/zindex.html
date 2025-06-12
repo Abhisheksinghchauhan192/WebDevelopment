@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Z-INDEX </title>
+
+    <style>
+
+        .box{
+            height: 150px;
+            width: 150px;
+            border: black 2px solid;
+            text-align: center;
+
+        }
+
+        #one{
+            background-color: brown;
+            z-index:-2;
+            position: relative;
+        }
+        #two{
+            background-color: green;
+            position: relative;
+            bottom: 50px;
+            z-index: -1;
+        }
+        #three{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+    
+    
+    <h1 style="text-align: center;">Z-INDEX </h1>
+
+    <div class="box" id = "one">1</div>
+    <div class="box" id="two">2</div>
+    <div class="box" id="three">3</div>
+
+</body>
+</html>

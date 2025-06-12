@@ -1,0 +1,39 @@
+h1{
+
+    text-align:center;
+    font-weight: bold;
+    line-height: 1cm;
+    font-size: 200%;
+    letter-spacing:0.4rem;
+    color: blue;
+    background-color: springgreen;
+}
+
+h2{
+    color: red;
+    text-align: center;
+}
+
+.secondpara{
+
+    color: red;
+    text-decoration: blue overline;
+    text-shadow: 1px 1px 5px ;
+
+}
+p{
+
+    text-align: left;
+    color:lightseagreen;
+    text-align: justify; /*make text horizontely equal */
+    text-decoration:double underline;
+    line-height:2;
+    letter-spacing:1px;
+    
+}
+.secondpara:hover{
+
+    font-size: 24px;
+    transition-duration: 0.3s;
+    /* text-decoration: none; */
+}

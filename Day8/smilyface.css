@@ -1,0 +1,46 @@
+h1{
+    text-align-last: center;
+}
+    
+body{
+    display: flex;
+}
+
+.main{
+    margin:0 auto; 
+}
+
+.face{
+    height: 500px;
+    width: 500px;
+    background-color: rgba(255, 243, 9, 0.955);
+    border-radius: 50%;
+}
+
+.eyecontainer{
+    width: 300px;
+    height: 200px;
+    position: relative;
+    top:150px;
+    left:85px;
+    display: flex;
+    justify-content:space-between;
+}
+.eye{
+    width:40px;
+    height: 40px;
+    background-color: black;
+    border-radius: 50%;
+    
+}
+
+.mouth{
+
+    height: 80px;
+    width: 300px;
+    background-color: rgb(156, 101, 29);
+    position: relative;
+    top:120px;
+    left:100px;
+    border-radius: 0 0  50% 50%;
+}

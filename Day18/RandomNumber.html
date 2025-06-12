@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Number Guess</title>
+</head>
+<body>
+    <script>
+
+        const maxrange = prompt("Enter the Max Range :");
+
+        const random = Math.floor(Math.random()*maxrange)+1;
+
+        let guess = prompt("Enter Your Guess! ");
+
+        while(1){
+
+            if(guess == 'quit'){
+                alert("User Quit !")
+                break;
+            }
+
+            else if (guess == random){
+                alert("You Win ! ")
+                break;
+            }
+            else if (guess < random){
+                alert("Number is Greater Than that");
+                guess = prompt("Enter Again ");
+            }
+            else{
+                alert("Number is Lesser Than That..");
+                guess = prompt("Enter Again ");
+            }
+        }
+    </script>
+</body>
+</html>

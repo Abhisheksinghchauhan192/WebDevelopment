@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Events</title>
+</head>
+<body>
+    <form action="/">
+        <label for="name">Name :</label>
+        <input type="text" id="name">
+        <label for="pass">Password</label>
+        <input type="password" id="pass">
+        <button  id="submit">Register</button>
+
+    </form>
+    <script>
+
+        let name = document.querySelector("#name");
+        let pass = document.querySelector("#pass");
+        let btn = document.querySelector("#submit");
+        name.placeholder = "Enter Your Name Here."       
+        pass.placeholder = "Enter Your Password !"
+        let form = document.querySelector("form");
+
+        form.addEventListener("submit" ,(event)=>{
+            // console.log("form submitted");
+            // but it imidiately go the the action url 
+            // to Prevent the default action we can use 
+           event.preventDefault(); // prevent from defalut action 
+
+            console.log("Form Submitted Succefully"); 
+              console.log(`Value of Name was - ${name.value}`);
+          console.log(`Value of pass was - ${pass.value}`);
+                 
+          // now accessing them using the form object 
+          console.log(` Using form object name - ${form.elements[0].value}`);
+          
+          console.log(` Using form object pass - ${form.elements[1].value}`);
+
+          console.dir(form);
+
+        });
+        
+
+        // input event and change event 
+        name.addEventListener("change",function (){
+            console.log("CHANGE Event Trigerred !");
+            console.log(this.value);
+        });
+
+        name.addEventListener("input",function (){
+            console.log("INPUT Event Trigerred !");
+            console.log(this.value);
+        });
+        
+        let body = document.querySelector("body");
+        body.addEventListener("load",(event)=>{
+            console.log("Scrolling ");
+            console.dir(event);
+        })
+
+
+    </script>
+</body>
+</html>

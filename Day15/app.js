@@ -1,0 +1,1 @@
+console.log("hello i am Java Script And linked to the page.. ");

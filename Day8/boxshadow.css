@@ -1,0 +1,29 @@
+.shadowbox{
+
+    height: 350px;
+    width: 350px;
+    background-color: lightblue;
+    margin: 0 auto; /*making it center */
+
+    box-shadow: 4px 4px 100px red;
+    padding:50px;
+    border-radius: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight:700;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.backimage{
+
+    margin: 50px auto;
+    height: 400px;
+    width: 700px;
+    background-image: url("./backimage.jpeg");
+    background-size: cover; 
+    /* scale it if needed with correct apect ration.*/
+
+    /* filled with reapeating the image no crop and scaling */ 
+    /* background-size: contain;   */
+
+}

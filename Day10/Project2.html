@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Webpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 800px;
+            margin: 20px;
+        }
+        .content img {
+            width: 200px;
+            margin-right: 20px;
+        }
+        .text {
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Simple Webpage</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section id="about" class="content">
+            <img src="./image/cat.jpg" alt="About Us Image">
+            <div class="text">
+                <h2>About Us</h2>
+                <p>This is a simple webpage created using only HTML and styled for better alignment.</p>
+            </div>
+        </section>
+        <section id="services" class="content">
+            <img src="./image/dog.jpg" alt="Services Image">
+            <div class="text">
+                <h2>Our Services</h2>
+                <p>We provide simple and effective web solutions with proper alignment of text and images.</p>
+            </div>
+        </section>
+        <section id="contact" class="content">
+            <img src="./image/deer.jpg" alt="Contact Image">
+            <div class="text">
+                <h2>Contact Us</h2>
+                <p>Email: example@example.com</p>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <p>&copy; 2025 Simple Webpage. All rights reserved.</p>
+    </footer>
+</body>
+</html>

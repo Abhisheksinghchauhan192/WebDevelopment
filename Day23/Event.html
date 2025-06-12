@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Events</title>
+</head>
+<body>
+    <script>
+        
+        // button clicking Event
+
+        
+        let log = ()=>console.log("Button Clicked !");
+        let btn = document.createElement("button");
+        btn.innerText = "Submit";
+        btn.onclick = log;
+        let desc = document.createElement('p');
+        let describe = ()=>{
+            desc.innerText = "Submit Your details";
+            desc.style.color = "lightblue";
+            body.append(desc);
+        }
+        let cleardesc = ()=>{
+            desc.remove();
+        }
+        btn.onmouseleave = cleardesc;
+        btn.onmouseenter = describe;
+        let body = document.querySelector("body");
+        body.append(btn);
+
+        // we can add multiple actikon with the help of 
+        // even listeners.. witht the same element. 
+        
+        let log2 = ()=>console.log("clicked 2");
+        btn.addEventListener("click",log);
+        btn.addEventListener("click",log2);
+
+
+    </script>
+</body>
+</html>

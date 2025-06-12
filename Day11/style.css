@@ -1,0 +1,136 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Poppins',sans-serif;
+}
+
+.main_box{
+
+    background: url("./photo.jpg");
+    height: 100vh;
+    background-size: cover;
+}
+
+.btn_one i {
+    color:white;
+    font-size:25px;
+    position: absolute;
+    line-height: 60px;
+    left:16px;
+    transition: all 0.3s linear;
+
+}
+
+.sidebar_menu{
+
+    position:fixed;
+    left:-350px;
+    height: 100vh;
+    width:300px;
+    background-color: rgba(255, 255, 255,0.1);
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
+    transition: all 0.3s linear;
+}
+
+.sidebar_menu .logo{
+
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    box-shadow: 0 3px 3px rgba(255, 255, 255, 0.3);
+}
+
+.sidebar_menu .logo a{
+    position: absolute;
+    color:white;
+    font-size: 20px;
+    left:35px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.sidebar_menu .btn_two{
+    color:grey;
+    font-size: 30px;
+    line-height: 60px;
+    position: absolute;
+    left:270px;
+    opacity: 0;
+    transition: all 0.3s linear;
+}
+
+.sidebar_menu .menu{
+
+    position: absolute;
+    width: 100%;
+    top:80px;
+    
+}
+
+.sidebar_menu .menu li{
+
+    margin-top: 6px;
+    padding:14px 20px;
+
+}
+
+.sidebar_menu .menu i,a{
+    color:white;
+    text-decoration: none;
+    font-size: 25px;
+}
+.sidebar_menu .menu i{
+    padding-right: 8px;
+}
+
+.sidebar_menu .social_media{
+
+    position: absolute;
+    bottom:50px;
+    left:25%;
+}
+
+.sidebar_menu .social_media i{
+
+    opacity: 0.5;
+    padding: 0 5px;
+}
+
+#check{
+    display: none;
+}
+
+.sidebar_menu .menu li:hover{
+
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.btn_one i:hover{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.sidebar_menu .btn_two i:hover{
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.sidebar_menu .social_media i:hover{
+    opacity: 1;
+    font-size: larger;
+}
+
+/* bring the side bar  */
+#check:checked ~ .sidebar_menu{
+    left:0;
+}
+
+/* hide the hamburger menu  */
+#check:checked ~ .btn_one{
+    opacity: 0;
+}
+/* show the cross icon */
+#check:checked ~ .sidebar_menu .btn_two{
+    opacity: 1;
+}

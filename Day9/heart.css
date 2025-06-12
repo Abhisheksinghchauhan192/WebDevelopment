@@ -1,0 +1,50 @@
+.heartcontainer{
+    display: flex;
+    margin: 0 auto;
+    position:relative;
+    background-color: black;
+    height: 500px;
+    width: 500px;
+    justify-content: center;
+    align-items: center;
+    
+    filter:drop-shadow(5px 5px 12px gold);
+}
+
+
+
+.circle{
+    position: absolute;
+    animation: beat 1s infinite ease-in-out;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: red;
+
+}
+#right{
+    margin-left: 150px;
+}
+
+.square{
+    animation: beat 1s infinite ease-in-out;
+    position: absolute;
+    height: 100px;
+    width: 95px;
+    background-color: red;
+    rotate: 225deg;
+    margin-top: 78px;
+    margin-left: 80px;
+}
+
+@keyframes beat {
+    0% {
+        transform:  scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.2); /* Slightly bigger */
+    }
+    100% {
+        transform: scale(1); /* Back to original */
+    }
+}

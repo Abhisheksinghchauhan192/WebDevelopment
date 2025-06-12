@@ -1,0 +1,17 @@
+.opacity{
+
+width:200px;
+height: 200px;
+background-color: rgba(224, 53, 53, 0.4);
+padding: 10px;
+}
+
+.opacityel{
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+    opacity: 0.5;
+    color:red;
+
+    padding: 10px;
+}

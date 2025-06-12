@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positioning of elements </title>
+    <link rel="stylesheet" href="positioning.css">
+</head>
+<body>
+    <h1>Positioning of the Elements in the Page</h1>
+    <div class="content"><p>
+        It tell that what will be the positional of an element in the document.
+        <ul>These are of Four Types:
+            <li>static
+                <ul><li>it is the default value (by Deafault)</li>
+                <li>top left right bottom z-index have no effect</li></ul>
+            </li>
+            <li>relative
+                <ul>
+                    <li>offset are  relative to itself. </li>
+                </ul>
+            </li>
+            <li>absolute
+                <ul>
+                    <li>Remove the element from the normal doc flow .</li>
+                    <li>relative to it's closest positioned ancesstor. otherwise placed relative to the doc(body).</li>
+                    <li>In the document no space is created for absolute </li>
+                </ul>
+            </li>
+            <li>fixed
+                <ul>
+                    <li>fixed is alway fixed in the page and relative to the initial block set by viewport.</li>
+                </ul>
+            </li>
+        </ul>
+    </p></div>
+
+    <hr>
+    <h2>Static Positioning . </h2>
+    <div class="demodiv"></div>
+    <div class="demodiv" id="static">
+    </div>
+
+    <hr>
+    <h2>Relative Positioning . </h2>
+    <div class="demodiv"></div>
+    <div class="demodiv" id="relative">
+    </div>
+
+    <br><br><br><br><br><br>
+    <hr>
+    <div class="abs">
+    <h2>absolute Positioning . </h2>
+    <div class="demodiv"></div>
+    <div class="demodiv" id="absolute">
+    </div>
+
+    <br><br><br><br><br><br>
+<hr>
+
+    <h2>Fixed Positioning . </h2>
+    <div class="demodiv"></div>
+    <div class="demodiv" id="fixed">
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

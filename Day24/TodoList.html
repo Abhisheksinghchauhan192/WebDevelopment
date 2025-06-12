@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST </title>
+    <style>
+        .main{
+            display: flex;;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        li{
+            list-style: none;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="main">
+        <h1>TODO APP</h1>
+        <input type="text" class="entertask">
+        <button class="addbtn">ADD Task</button>
+        <ul class="tasks">
+        </ul>
+
+    </div>
+
+    <script>
+
+        // adding functionality of adding a task to the tasks list 
+
+        let inp = document.querySelector(".entertask");
+        let addbtn = document.querySelector(".addbtn");
+        let tasks = document.querySelector(".tasks");
+
+        function addtask(){
+            let task = document.createElement("li");
+            let check = document.createElement("input");
+            
+            check.type = "checkbox";
+            check.classList.add("checkbox");
+            
+            task.innerHTML = `<b>  ${inp.value} </b>`;
+            task.prepend(check);
+            tasks.prepend(task);
+        }
+
+        // now to delete we will apply the concept of 
+        // event Delegation here 
+        // by simply adding evenlistners on parent of the 
+        // items like in this case in li or ul 
+        // then select the target when we want to delete 
+        // and get the parent and remove it from the document 
+
+        let li = document.querySelector("ul");
+
+        addbtn.addEventListener("click",addtask);
+        li.addEventListener("click",(event)=>{
+            
+            if(event.target.nodeName === "INPUT"){
+                //get the parent list item and delete it 
+                let par = event.target.parentElement;
+                
+                // following is to make delete look a little nicer 
+                setTimeout(() => {
+                    par.innerHTML = `<b><del>${par.innerText}</del></b>`;
+                    setTimeout(()=>{
+                        par.remove();
+                        console.log("task remove successfully ");
+                    },800)
+                    ;
+
+                }, 500);
+
+            }
+        })
+
+    </script>
+</body>
+</html>

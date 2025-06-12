@@ -1,0 +1,68 @@
+h1{
+
+    text-align: center;
+    color:red;
+    text-decoration:underline green wavy;
+    ;
+}
+
+.content ul{
+    list-style-image: url("./rocket\ colorful\ list\ bullet\ point\ \(Abhi\).png");
+}
+
+.content ul li ul{
+    list-style-image: url("./rocketBulletListPoint_Blue_file.png");
+}
+
+.demodiv{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    display: inline-block
+    ; 
+}
+
+#static{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: static;
+}
+
+#relative{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: relative; 
+    top:60px;
+    left:60px;
+}
+
+.abs{
+    position: relative;
+}
+
+#absolute{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: absolute; 
+    top:100px;
+    left:100px;
+}
+
+.fi{
+    
+    height: 400px;
+    width: 700px;
+    background-color: black;
+}
+#fixed{
+
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    position: fixed; 
+    top:70px;
+    left:500px;
+}

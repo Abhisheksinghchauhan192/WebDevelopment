@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyBoard Events</title>
+    <style>
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .keyboardevent{
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .editor{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 50%px;
+        }
+
+        #showbox{
+            display: flex;
+            background-color: rgb(183, 183, 155);
+
+        }
+        #inputtext{
+
+            width: 220px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>KeyBoard Events.</h1>
+        <div class="about">
+            <p>Can be of following types of Events</p>
+            <dl>
+                <dt>KeyDown
+                    <dd>when key is presed dowards</dd>
+                </dt>
+                <dt>KeyUp
+                    <dd>when key is released it comes upward</dd>
+                </dt>
+                <dt>KeyPress
+                    <dd>when key is pressed and not released </dd>
+                </dt>
+
+            </dl>
+        </div>
+        <div class="keyboardevent"></div>
+    </div>
+
+
+    <script>
+
+        let btn = document.createElement("button");
+        let about = document.querySelector(".about");
+        about.append(btn);
+        btn.innerText = "Click Me !";
+        btn.style.backgroundColor = "skyblue";
+        function defaulteventobject (eventobj){
+            console.dir(eventobj);
+        }
+
+        btn.addEventListener("click",defaulteventobject);
+        btn.addEventListener("dblclick",defaulteventobject);
+
+        let keyboard = document.querySelector(".keyboardevent");
+        let inputbox = document.createElement("input");
+        inputbox.placeholder = "Type Something Here";
+        keyboard.append(inputbox);
+        inputbox.id = "inputarea";
+        let submit = document.createElement("button");
+        keyboard.append(submit);
+        submit.innerHTML = "<b> Submit</b>";
+        submit.style.margin = "20px";
+
+        let inp = document.querySelector("#inputarea");
+        inp.addEventListener("keydown",function (event) {
+            console.dir(event);
+            console.log(`${event.key} key is pressed down`);    
+        });
+        inp.addEventListener("keyup",()=>{
+            console.log("key was released !");
+        });
+
+
+        // making a Own TextEditor with keyboard event 
+        // simple type and it will be showed what we have typed.
+        let editor = document.createElement("div");
+        editor.classList.add(".editor");
+        let main  = document.querySelector(".main");
+        main.append(editor);
+        let heading = document.createElement("h1");
+        heading.innerText = " ** My Text Editor **";
+        let showbox = document.createElement("p");
+        let editorinput = document.createElement("input");
+        editorinput.placeholder = "Type Here ...";
+        //showbox.placeholder = "Your Typed Text Will Be Showen Here";
+        showbox.id = "showbox";
+        editorinput.id = "inputtext";
+        editor.append(heading);
+        editor.append(showbox);
+        editor.append(editorinput);
+        // selecting text input to get's it's value
+        let textinput = document.querySelector("#inputtext");
+        function show(e){
+            showbox.innerText = `${textinput.value}`;
+        }
+        editorinput.addEventListener("input",show);
+    
+    </script>
+</body>
+</html>

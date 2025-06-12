@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML </title>
+</head>
+<body>
+    <h1 style="text-align: center;">Forms in HTML </h1>
+
+    <p>
+        <ul>
+            <li>Forms are used to collect data </li>
+            <li>eg .  signup form </li>
+            <li>&lt form action="/action"&gt is used to submit the data for the further analysis..</li>
+            <li>input element in form is the most important most used element </li>
+            <li>input no opening closing single element used to control types of input usng type attribute </li>
+            <br>
+            <li>Some Important Types of Input 
+                <ol>
+                    <li>&ltinput type ="text"&gt</li>
+                    <li>&lt input type = "password"&gt</li>
+                    <li>&lt input type = "number"&gt</li>
+                    <li>&lt input type = "time"&gt</li>
+                    <li>&lt input type = "color"&gt</li>
+                    <li>&lt input type = "button"&gt</li>
+                    <li>&lt input type = "checkbox"&gt</li>
+                    <li>&lt input type ="email"&gt</li>
+                    <li>&lt input type="file"&gt</li>
+                </ol>
+            </li>
+
+        </ul>
+    </p>
+
+    <form action="/action">
+            <label for="username">User Name :</label>
+            <br>
+            <input id="username" type="text" placeholder="Enter User name">
+            <br>
+            <label for="pass">Password</label>
+            <input type="password" id="pass" placeholder="password..">
+            <br>
+            <label for="cal">Date</label>
+            <input type="date" id="cal">
+            <br>
+            <label for="num">Number only inputs:</label>
+            <input type="number" id ="num" placeholder="Enter numbers here ">
+            <br>
+            <label for="col">Color:</label>
+            <input type="color" id="col" >
+            <br>
+            <!-- do not use input tag to create button as follow  -->
+            <label for="but " >Button Type: </label>
+            <input type="submit" id="but" value="click me!">
+            <br>
+            <label for="chec">chckbox type :</label>
+            <input type="checkbox" id="chec">
+            <br>
+            <!-- can also create label as follow but not recommended -->
+            <label for="files">Upload file
+                <input type="file" id = "files">
+            </label>
+           
+    </form>
+
+</body>
+</html>

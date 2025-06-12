@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button in Forms </title>
+</head>
+<body>
+    <h1 style="text-align: center;">Butons in Forms</h1>
+
+    <p>
+        <ul>
+            <li>
+                Default Behaviour of Button inside the form is to Submit the form to  a file .. 
+            </li>
+            <li>
+                we can set the type attribute in the buttons 
+            </li>
+            <li>eg -  type = "reset" reset the inputs of the form </li>
+            <br>
+            <li>name = "" attribute in form is used for submitting data to a server or page so data goes in the form of name:value Pair.. </li>
+            <li>
+                and stored like follow .. <br>
+                <section style="text-align: center;">
+                    
+                <table border="" style="display: inline-block">
+                    <tr>
+                    <th>username</th>
+                    <th>password</th>
+                    </tr>
+                    <tr>
+                        <td>user1</td>
+                        <td>2343@sdkl</td>
+                    </tr>
+                    <tr>
+                        <td>user2</td>
+                        <td>pass2@sdl</td>
+                    </tr>
+                </table>
+                </section>
+            </li>
+            <li>
+
+            </li>
+        </ul>
+    </p>
+
+    <form action="/action">
+
+        <label for="username">UserName:</label>
+        <input type="text" placeholder="User Name." id="username" name="username">
+        <br>
+        <label for="Pass">Password:</label>
+        <input type="password" placeholder="Password" id="Pass" name="password">
+        
+        
+        <button>Sumbit</button>
+        <button type="submit">Submit2</button>
+        <button type="reset">Reset </button>
+
+
+    </form>
+
+    <hr style="border:solid;">
+
+    <h2>New Form Which 
+        Search the input in Youtube
+
+    </h2>
+    <form action="https://www.youtube.com/results">
+        <label for="ytsearch"></label>
+        <input type="text" placeholder="Search in Youtube" id="ytsearch" name="search_query">
+
+        <button>Search</button>
+    </form>
+    <hr style="border: solid;">
+    <form action="https://www.google.com/search">
+        <label for="gsearch"></label>
+        <input type="text" placeholder="Search in Google" id="gsearch" name="q">
+        <button>Search</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,52 @@
+header{
+    text-align: center;
+}
+span{
+
+    color:rgb(202, 28, 28);
+}
+
+#weblink{
+    color:red;
+}
+
+.main{
+
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.cards{
+    display: flex;
+    text-align: justify;
+    flex-wrap: wrap;
+    margin:1.1rem;
+    border: black 2px solid ;
+    border-radius: 20px;
+    padding: 0.5rem;
+}
+
+.cards img{
+    width: 100%;
+    border-radius: 20px;
+
+}
+
+@media (max-width:675px){
+
+    .main{
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media (min-width:850px) {
+
+    .cards{
+
+        width:400px;
+    }
+
+}
+

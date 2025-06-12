@@ -1,0 +1,35 @@
+
+.container{
+
+    display:flex;
+    width: 80%;
+    height: 400px;
+    background-color: lightblue;
+    flex-direction: row;
+    /* justify-content: center;  /*align along main axis */
+    /* flex-wrap: wrap; */
+    /* align-content: center;  /*along cross axis */
+
+
+}
+.items{
+    height: 50px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#orange{
+    flex-basis: 100px; /* sets the initial size in main direction */
+    flex-grow: 2; /* grows in 2times proportin in left over space */
+    flex-shrink: 1;
+    max-width: 400px; /* limit the growth to 400px max */
+
+}
+#blue{
+    flex-grow: 1; /* grows in 1 proportion in left over place*/
+    flex-shrink: 2;/*THis will shrink with factor of 2 of orange size. */
+}
+

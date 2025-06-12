@@ -1,0 +1,18 @@
+.main{
+    padding: 10px;
+    height: 400px;
+    width: 400px;
+    background-color:green;
+    transition:1s  ease-out 0.2s;
+    text-align: center;
+    border:blue 2px solid;
+}
+
+.main:hover{
+    border: red solid 10px;
+    color:white;
+    text-align: center;
+    background-color: black;
+    border-radius: 50%;
+    padding: 40px;
+}

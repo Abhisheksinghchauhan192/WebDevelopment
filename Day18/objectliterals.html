@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Literals</title>
+</head>
+<body>
+    
+    <p>
+        Object literal are used to store keyed collection 
+        <br>
+        key->value. 
+
+        
+    </p>
+    <script> 
+        let student = {
+            name:"Abhi",
+            age:21,
+            marks:99,
+            city:"Almora",
+            2:"Uttarakhand",
+            color:["red","blue","green"]
+        };
+
+        // how to get the values from the object.. 
+        console.log(student['name']); 
+        // or 
+        console.log(student.name);
+
+        // javascript convert the key to string first and then check it's value in the object eg - .
+        console.log(student[2]);  
+
+        
+        const tpost={
+            likes:2,
+            repost:4,
+            username:'@selfstar',
+            content:"This is the first post",
+            tags:["@tsfsf","@gsdfks","@gas"]
+        }
+         
+        // to update use 
+        tpost.likes = 44;
+        // to add new property 
+        tpost.loves = 22;
+        // to delete a property 
+        delete tpost.repost;
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RelativeUnits</title>
+    <link rel="stylesheet" href="relativeunits.css">
+</head>
+<body>
+    <h1>Relative Units for measurements.</h1>
+    <hr>
+    <h2>1 - percentage</h2>
+    <div class="per">
+        <div id="perin"></div>
+        <p>Percentage is used to set the relative dimention to the parent element </p>
+    </div>
+<hr>
+<h2>2 - em</h2>
+
+<section id="em"> Snow bolling effect in the em unit 
+    basically used for text based measearments in the documents . 
+    <div class="emdiv">div1
+        set propertity to it's parent relative 
+        <div class="emdiv">div2
+            <div class="emdiv">div3</div>
+        </div>
+    </div>
+</section>
+<div id="em">
+    this is 
+</div>
+
+<hr>
+
+<h2>3 - rem </h2>
+<section>
+    but here comes the rem which set relative to root element.
+    <div>div1
+        <div>div2
+            <div>div3</div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

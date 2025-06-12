@@ -1,0 +1,48 @@
+h1{
+    text-align: center;
+}
+
+.ani{
+
+    width:70%;
+    height: 200px;
+
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    /* defining a animation  */
+    /* animation-name: sizeandcolorChange;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2s;
+    animation-iteration-count: infinite; */
+
+
+    /* above qualities can be combined in just one property  */
+
+    animation: sizeandcolorChange 1s ease-in-out 1s infinite;
+
+}
+
+@keyframes sizeandcolorChange{
+
+    0%{
+        width: 50px;
+        background-color: red;
+    }
+    50%{
+        width: 500px;
+        background-color: blue;
+    }
+    100%{
+        width:50px;
+        background-color: green;
+    }
+}
+
+
+
+
