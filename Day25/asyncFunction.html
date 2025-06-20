@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async / await</title>
+</head>
+<body>
+    <h1>async function</h1>
+    <h2>How to create one ? </h2>
+    <p>By using async keyword in front of the function and it implicitely return a Promise object</p>
+
+    <script>
+
+       async function greet(){
+
+            return "hello World";
+        }
+
+        // after printing the greet() 
+
+// Promise {<fulfilled>: 'hello World'}
+// [[Prototype]]: Promise
+// [[PromiseState]] : "fulfilled"
+// [[PromiseResult]] : "hello World"
+
+
+        // or 
+
+        let greet2 = async ()=>{
+            return "Heloo World 2";
+
+        }
+// [[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: "Heloo World 2"
+
+        // when some error occurs promise is rejected and result contain the error msg in the promise 
+
+    let err = async ()=>{
+        kdfskdf;
+        //or also can trow a custome erro 
+        // throw "some random error "; 
+    }
+
+    console.dir(err());
+
+    // Promise[[Prototype]]: Promise[[PromiseState]]: "rejected"[[PromiseResult]]: ReferenceError: kdfskdf is not defined
+    // at err (http://127.0.0.1:3000/Day25/asyncFunction.html:39:9)
+    // at http://127.0.0.1:3000/Day25/asyncFunction.html:42:17
+
+    // can also apply the .then and catch in after async calling 
+
+    greet().then((res)=>{
+        console.log("Promis Successful  Result - ",res);
+    }).catch((err)=>{
+        console.log("Promis Rejected error - ",err);
+    })
+
+
+    
+    </script>
+</body>
+</html>

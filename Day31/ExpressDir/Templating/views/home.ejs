@@ -1,0 +1,41 @@
+<%-include("includes/head.ejs") %>
+<body>
+    <h1>This is HomePage</h1>
+    <p>This page is generated with the help of ejs Templates.</p>
+
+    <div class="info">
+
+        <h2>Tags in ejs</h2>
+        <h2> &lt;%=  - used for puting value in html </h2>
+        <h2> %&gt; - is used for ending of tag </h2>
+        <h2> &lt;%  - is used for control flow no output </h2>
+        <p>Use of &lt;%= </p>
+        <div class="use">
+            <h2> <%= "abhishek singh chauhan".toUpperCase(); %> </h2>
+        </div>
+
+    </div>
+
+    <div class="cond">
+        <h2>use of Conditional in ejs</h2>
+        <%let value = Math.floor(Math.random()*7); %>
+        <h3> value is - <%= value %> </h3>
+        <% if (value>3) { %>
+            <h3>Brilliant</h3>
+        <% } else {%>
+        <h3>Try again</h3>
+        <%}%>
+    </div>
+
+    <div class="loops">
+        <h2>Printing with loops in ejs</h2>
+        <% for (let i = 1;i<10;i++){ %>
+            <h5> value - <%= i%> </h5>
+        <% } %>
+
+    </div>
+
+
+    <%-  include("includes/footer.ejs") %>
+</body>
+</html>

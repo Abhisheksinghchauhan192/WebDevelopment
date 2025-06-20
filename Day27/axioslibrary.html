@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+
+    <h1>Get Random Fact </h1>
+    <button class="factbtn">Show new Fact</button>
+    <button class="imgbtn">Get Dog Image</button>
+    <p class="show"></p>
+    <img  class="imgbox">
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+    <script>
+
+        // requesting using axios.. 
+
+
+        async function getFact() {
+            try{
+
+                let fact = await axios.get("https://catfact.ninja/fact");
+                return fact.data.fact;
+            }catch(e){
+                console.log("No Fact Found");
+                console.log(e);
+                return "No Fact Found";
+            }            
+        }
+
+        let btn = document.querySelector(".factbtn");
+        btn.addEventListener("click",async()=>{
+
+            // using await here to resolve the promise 
+            let fact = await getFact();
+
+            let showbox  = document.querySelector(".show");
+            showbox.innerText = fact;
+
+        });
+
+        async function getImage() {
+            try{
+
+                let img = await axios.get("https://dog.ceo/api/breeds/image/random");
+                console.log(img);
+                return img.data.message;
+            }catch(e){
+                console.log("No Image Found");
+                console.log(e);
+                return "/";
+            }            
+        }
+
+        let btn2 = document.querySelector(".imgbtn");
+        btn2.addEventListener("click",async()=>{
+            let img = "/";
+            try{
+
+                 img = await getImage();
+            }catch(e){
+                console.log("Error resolving img url");
+            }
+
+            let showimg = document.querySelector(".imgbox");
+            console.log(showimg);
+
+            // showimg.setAttribute("src",`${img}`);
+            // or 
+            showimg.src = img;
+
+        })
+
+
+        // sending headers with our request using axios. 
+        // sending it to dad jokes api.. 
+        let url = "https://icanhazdadjoke.com"
+        const config = {headers:{Accept:"application/json"}};
+        
+        async function getJokes() {
+            
+            try{
+                // it will get a json response now 
+                // default for url is html page. 
+
+                return await axios.get(url,config);
+            }catch(e){
+
+                console.log("Some error occured");
+            }
+        }
+        
+        console.log(joke.data.joke);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBackHellDemonstartion</title>
+</head>
+<body>
+    <h1> Demonstration </h1>
+    <script>
+
+        // let takaing simple task of chaging the color of the h1 tag 
+        // we can do it like 
+        let h1 = document.querySelector("h1");
+        h1.style.color = "red";
+        // but what if we want to set it after a 1 second. 
+        // we can do 
+        setTimeout(() => {
+            h1.style.color = "green";
+        }, 1000);
+
+        // now what if we want to set is as newColor now after another one second 
+        setTimeout(() => {
+            h1.style.color="pink";
+        }, 2000);// we have to set it to 2 sec now otherwise  it will instately change and we will not see green color 
+        
+        // now to set new color but there is a problem we can't do like thsi every time 
+
+        // let's make a function can call it 
+
+        function changeColor(color,delay){
+
+            setTimeout(() => {
+                h1.style.color = `${color}`;
+                
+            }, delay);
+        }
+
+        changeColor("green",3000);
+        changeColor("yellow",4000);
+        changeColor("red",5000);
+
+        // this is also not a good desing 
+        // So now what we do is employee a function 
+        // that will be called after the color change on our change function when we call it. this function is a callback 
+
+        // let's creating antother h2 element do demonstrate
+        let h2 = document.createElement("h2");
+        h2.innerHTML = "<br><br> <b> CallBack Hell Showcase";
+        document.querySelector("body").append(h2);
+
+        function changeColor2(color,delay,nextColor){
+
+            setTimeout(() => {
+                h2.style.color = `${color}`;
+                // if callback is passed then only do it 
+                if(nextColor)
+                    nextColor();
+            }, delay);
+        }
+
+        changeColor2("red",1000,()=>{
+            changeColor2("green",1000,()=>{
+                changeColor2("pink",1000,()=>{
+                    changeColor2("blue",1000,()=>{
+                        changeColor2("red",1000)
+                    })
+                })
+            })
+        });
+
+        // above code you can see nested function calling inside this works but become confusing and not a good 
+        //desing this IS Called CALLBACK HELL  in js 
+
+        // NOTE : simple change color demonstartion we get this kind of nesting while working with the  database or other file.. in the js program .. 
+
+        // to handle this there are following concepts are employed in js 
+        // 1 - Promises
+        // 2 - Async /await
+        // 3 - Event Emitter in node
+        // 4 - make code moduler with named function.
+        
+
+    </script>
+</body>
+</html>

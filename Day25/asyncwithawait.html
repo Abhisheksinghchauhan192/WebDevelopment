@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async and await use</title>
+</head>
+<body>
+    
+    <h1>I am Demonstrating async and await </h1>
+
+    <script>
+
+        let h1 = document.querySelector('h1');
+
+        function colorChange(color,delay){
+
+            return new Promise((resolve,reject)=>{
+
+                setTimeout(() => {
+
+                    let rand = Math.floor(Math.random()*11);
+                    if(rand>3){
+                        console.log("some error caught");
+                        reject("Promise Rejected");
+                    }
+                    console.log(`Color changed to ${color}`);
+                    h1.style.color = `${color}`;
+                    resolve("done");
+                }, delay);
+            });
+        }
+
+        // We should write the await calls in try 
+        // block cause a Promise can be rejected 
+        // so if not write in try block the further code will not execute 
+
+        async function Demonstrating() {
+            
+            try{
+
+                await colorChange("red",1000);
+                await  colorChange("blue",1000);
+                await colorChange("green",1000);
+                await colorChange("yellow",1000);
+                await colorChange("orange",1000);
+            }
+            catch(err){
+                console.log("Some error Occured:",err);
+            }
+            console.log("Afer the color Change");
+            console.log(4);
+
+        }
+
+        Demonstrating();
+
+
+    </script>
+</body>
+</html>

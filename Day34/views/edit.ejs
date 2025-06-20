@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit the post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Edit Your Post</h1>
+
+    <form action="/posts/<%= post.id%>?_method=PATCH" method="post">
+        <p class="content"> Post id - <%= post.id %> </p>
+        <p class="content">Your Previous Content - <%= post.content %></p>
+        <h3>Edit below</h3>
+        <textarea name="content" id="content-box" ><%=post.content%></textarea>
+        <br>
+        <button type="submit">Save</button>
+    </form>
+
+    <div class="note">
+        <p>
+            &star; 
+             HTML form directely not support patch put and delete <br>
+            they only support get and post 
+            <br>
+            we will use a package name method-override here to 
+            <br>override the methods of the client 
+
+        </p>
+    </div>
+</body>
+</html>

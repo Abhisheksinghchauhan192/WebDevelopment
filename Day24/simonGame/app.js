@@ -3,8 +3,8 @@ let userSeq = [];// track the user entered seq . of colors.
 let maxScore = 0;
 
 // objects for printing the game state. 
-let msg   = document.querySelector("#status #msg");
-let status = document.querySelector("#status #level");
+let msg   = document.querySelector("#msg");
+let status = document.querySelector("#level");
 
 gameSeq = []; // this will contain the game sequence to be varified with user sequence. 
 

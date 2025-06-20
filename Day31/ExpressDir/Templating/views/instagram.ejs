@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Page Of User</title>
+</head>
+<body>
+    
+    <div class="main">
+        <h1> @<%= name %></h1>
+        <button>Follow</button>
+        <button>Following</button>
+
+        <div class="posts">
+            <p>Here are the post.</p>
+            <img src="/" alt="image1">
+            <img src="/" alt="imge2">
+            <h2>Your Followers list </h2>
+
+            <% for(let name of followers) {%>
+                <li><%= name %></li>
+            <%} %>
+        </div>
+    </div>
+
+    <%- include("includes/footer.ejs") %>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Posts</title>
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    <h1>Chauhan's Blog Site</h1>
+    
+    <% for(post of posts){ %>
+        <div class="post">
+            <h2 class="user">UserName: @<%= post.username %></h2>
+            <pre class="content"> <span>Content : <br><br></span> <%= post.content%></pre>
+
+            <a href="/posts/<%=post.id%>">See in Detail</a>
+            <br>
+            <a href="/posts/<%=post.id%>/edit">edit</a>
+            <form action="/posts/<%= post.id%>?_method=DELETE" method="post">
+                <button>Delete</button>
+            </form>
+        </div>
+        
+    <% } %>
+
+    <br>
+    <br>
+    <br>
+    <a href="/posts/new"><button>New Post</button></a>
+
+</body>
+</html>

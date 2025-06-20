@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get And Post Request</title>
+</head>
+<body>
+    
+    <h1>Diff Betwen Get and Post Requests.</h1>
+    <div class="get">
+        <h2>Get Request</h2>
+        <ul>
+            <li>Used to get data </li>
+            <li>Data is sent in url and it is visible</li>
+            <li>url has a limit </li>
+            <li>security concern</li>
+        </ul>
+
+        <h2>Get Request Form </h2>
+        <form action="http://localhost:3000/register" method="get" >
+
+            <input type="text" placeholder="Enter Your Name" name="username">
+            <input type="password" placeholder="Enter Your Password" name="password">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="post">
+        <h2>Post request</h2>
+        <ul>
+            <li>To post Something &par; Write,Create,Update &par;</li>
+            <li>Data is Sent in Request Body - http protocol's body</li>
+            <li>Not Visible in url</li>
+        </ul>
+        <h2>Post Request Form</h2>
+        <form action="http://localhost:3000/register" method="post">
+
+             <input type="text" placeholder="Enter Your Name" name="username">
+            <input type="password" placeholder="Enter Your Password" name="password">
+            <button type="submit">Submit</button>
+        
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Data Of Universites</title>
+</head>
+<body>
+    <h1>Get Data Of Universities in a Country</h1>
+
+    <input type="text" class="input">
+    <button class="btn">Get Data</button>
+    <p class="result"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+
+<script>
+
+        let input = document.querySelector(".input");
+        let btn = document.querySelector(".btn");
+        let show = document.querySelector(".result");
+        let url = "http://universities.hipolabs.com/search?name=";
+
+        async function getUniversities(country) {
+            
+            try{
+                // console.log(url+country);
+
+                if(!country)
+                    return "Please Input Country"
+                let res = await axios.get(url+country);
+                return res.data;
+
+            }catch(e){
+                console.log("No Data Found For the Country");
+                return `No Data Found For - ${country}`;
+            }
+        }
+
+      async  function showData(){
+
+           let country = input.value;
+           console.log(input.value);
+           let data =   await getUniversities(country);
+           
+           let res = "";
+
+           if(typeof(data) == "object"){
+               for(let i = 0 ;i<data.length;i++){
+                    res += `${i+1} - ${data[i].name}`;
+                    res += "<br>";
+               }
+               if(!res){
+                res = "No Data Found for that country";
+               }
+           }else{
+            res  = data;
+           }
+
+           show.innerHTML = res;
+        }
+
+        btn.addEventListener("click",showData);
+
+
+    </script>
+</body>
+</html>

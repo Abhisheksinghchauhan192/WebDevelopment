@@ -1,0 +1,26 @@
+h1{
+
+    color:purple;
+}
+
+.post{
+
+    background-color: blanchedalmond;
+}
+
+.user{
+
+    font-style: italic;
+}
+
+.content{
+
+    font-size: 13px;
+    font-style: italic;
+    padding: 2rem;
+}
+
+#content-box{
+    height: 300px;
+    width: 400px;
+}
