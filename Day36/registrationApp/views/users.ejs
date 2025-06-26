@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Users</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/homestyle.css">
+    <link rel="stylesheet" href="modelstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    
+    <%-include("includes/header.ejs") %>
+
+<div id="successModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="hideModal()">×</span>
+        <div class="icon">
+            <i class="fas fa-check-circle success-icon"></i>
+        </div>
+        <h3>Success</h3> <!-- This will be dynamically updated -->
+        <p>Message goes here</p> <!-- This will be dynamically updated -->
+        <button class="btn-ok" onclick="hideModal()">OK</button>
+    </div>
+</div>
+
+
+    <div class="hero">
+           <h1>All Users</h1>
+           <p>All the users in the database</p>
+</div>
+
+    <table class="show-table">
+        <thead>
+
+            <tr>
+                <th>S.N</th>
+                <th>ID</th>
+                <th>UserName</th>
+                <th>Email</th>
+                <th>DeleteUser</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% for (let i = 0;i<users.length;i++) { %>
+                <tr>
+                    <td><%= i+1%></td>
+                    <td><%= users[i].id%></td>
+                    <td class="sp-td"><%=users[i].username %>
+                        &nbsp;
+                        <form action="/users/<%=users[i].id%>" method="get">
+                            <button class="cool-btn">Edit</button>
+                        </form>
+                    </td>
+                    <td><%=users[i].email %></td>
+                    <td>
+                        <form action="/users/<%=users[i].id%>" method="post">
+                            <button class="cool-btn">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <%} %>
+
+        </tbody>
+    </table>
+
+    <%-include("includes/footer.ejs") %>
+    <script src="/model.js"></script>
+</body>
+</html>

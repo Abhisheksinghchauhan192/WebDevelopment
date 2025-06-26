@@ -127,7 +127,10 @@ app.patch("/posts/:id",(req,res)=>{
 app.delete("/posts/:id",(req,res)=>{
 
     let id = req.params.id;
+    // deleting the post logic. here .. 
     posts = posts.filter((p)=>p.id !== id);
+    // by just filtering out and reassigning the posts rest of posts.. after filter
+    
     res.redirect("/posts");
 })
 

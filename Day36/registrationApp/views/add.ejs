@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add User</title>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/homestyle.css">
+  </head>
+  <body>
+    <%-include("includes/header.ejs") %>
+    
+    <div class="hero">
+      
+      <h1>Add User to the Database</h1>
+          <div class="container">
+            <form action="/users/add" method="post">
+              <label for="id">ID: </label>
+              <input type="text" name="id" required />
+              <br />
+              <br />
+              <label for="username">UserName: </label>
+              <input type="text" name="username" required />
+              <br /><br />
+              <label for="email">Email: </label>
+              <input type="email" name="email" required />
+              <br /><br />
+              <label for="password">Password: </label>
+              <input type="password" name="password" required />
+      
+              <br /><br />
+              <button class="cool-btn">Add Data</button>
+            </form>
+          </div>
+
+    </div>
+    <%-include("includes/footer.ejs") %>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+/* Success Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
+}
+
+.modal-content {
+    background-color: #f8f9fa;
+    margin: 15% auto;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+    animation: modalFadeIn 0.2s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.modal h3 {
+    color: #2e7d32;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.modal p {
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.modal .close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #161515;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.modal .close:hover {
+    color: #333;
+}
+
+.success-icon {
+    color: #2e7d32;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.btn-ok {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-ok:hover {
+    background-color: #1b5e20;
+}
+
+/* Different icons for different actions */
+.success-icon { color: #2e7d32; }
+.warning-icon { color: #ff9800; }
+.error-icon { color: #f44336; }
+
+.modal-content {
+    /* existing styles */
+    transition: all 0.2s ease;
+}

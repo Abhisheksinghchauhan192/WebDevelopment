@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit UserName</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/homestyle.css">
+</head>
+<body>
+    <%-include("includes/header.ejs") %>
+
+    <div class="hero">
+
+        <h1>EDIT UserName </h1>
+        <p>You can Edi only the Username here. 
+            fill out correct password for that 
+        </p>
+        <form action="/users/<%=user.id%>?_method=PATCH" method="post">
+            <textarea name="username" id="username"><%=user.username %></textarea>
+            <br>
+            <h3>Enter Your PassWord to confirm </h3>
+            <input type="password" placeholder="Password ...." name="password" required>
+            <button class="cool-btn">Save</button>
+        </form>
+    </div>
+    <%- include("includes/footer.ejs") %>
+</body>
+</html>
